@@ -7,7 +7,7 @@ This repository contains two Python scripts that automatically download subtitle
 
 1. **`opensubtitles.py`**: This script scans a given folder for video files, downloads the best matching Romanian subtitles from OpenSubtitles, and saves them as `.srt` files in UTF-8 encoding.
 
-2. **`sync_subtitle.py`**: This script extends the functionality of `opensubtitles.py` by additionally synchronizing the downloaded subtitles with the video using `ffsubsync`.
+2. **`sub_and_sync.py`**: This script extends the functionality of `opensubtitles.py` by additionally synchronizing the downloaded subtitles with the video using `ffsubsync`.
 
 ## Prerequisites
 
@@ -49,14 +49,14 @@ python opensubtitles.py <Root Folder>
 
 Where `<Root Folder>` is the directory containing your video files.
 
-### 2. `sync_subtitle.py`
+### 2. `sub_and_sync.py`
 
 This script performs the same steps as `opensubtitles.py` but adds the functionality to synchronize the downloaded subtitles with the video file using `ffsubsync`.
 
 To run the script:
 
 ```bash
-python sync_subtitle.py <Root Folder>
+python sub_and_sync.py <Root Folder>
 ```
 
 Where `<Root Folder>` is the directory containing your video files.
@@ -65,7 +65,7 @@ Where `<Root Folder>` is the directory containing your video files.
 
 ```bash
 python opensubtitles.py /path/to/videos
-python sync_subtitle.py /path/to/videos
+python sub_and_sync.py /path/to/videos
 ```
 
 ### How it works
@@ -75,7 +75,7 @@ python sync_subtitle.py /path/to/videos
    - Download the best Romanian subtitles from OpenSubtitles.
    - Save the subtitles as `.srt` files in UTF-8 encoding.
 
-2. The `sync_subtitle.py` script:
+2. The `sub_and_sync.py` script:
    - After downloading the subtitles, it synchronizes them with the video using `ffsubsync`.
 
 ## Notes
@@ -83,7 +83,7 @@ python sync_subtitle.py /path/to/videos
 - Make sure `ffsubsync` is correctly installed and accessible in the virtual environment.
 - The scripts expect video files to be in formats that `subliminal` supports.
 - The subtitle files will be saved in the same directory as the video files with the `.srt` extension.
-- The `sync_subtitle.py` script will synchronize subtitle timings after the subtitle is downloaded and saved.
+- The `sub_and_sync.py` script will synchronize subtitle timings after the subtitle is downloaded and saved.
 
 ## License
 
