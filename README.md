@@ -5,7 +5,7 @@ This repository contains two Python scripts that automatically download subtitle
 
 ## Files
 
-1. **`opensubtitles.py`**: This script scans a given folder for video files, downloads the best matching Romanian subtitles from OpenSubtitles, and saves them as `.srt` files in UTF-8 encoding.
+1. **`opensubtitles.py`**: This script scans a given folder for video files, downloads the best matching Romanian ( or any other language) subtitles from OpenSubtitles, and saves them as `.srt` files in UTF-8 encoding.
 
 2. **`sub_and_sync.py`**: This script extends the functionality of `opensubtitles.py` by additionally synchronizing the downloaded subtitles with the video using `ffsubsync`.
 
@@ -72,7 +72,7 @@ python sub_and_sync.py /path/to/videos
 
 1. Both scripts:
    - Scan the provided folder for video files newer than 4 weeks.
-   - Download the best Romanian subtitles from OpenSubtitles.
+   - Download the best Romanian ( or any other language ) subtitles from OpenSubtitles.
    - Save the subtitles as `.srt` files in UTF-8 encoding.
 
 2. The `sub_and_sync.py` script:
