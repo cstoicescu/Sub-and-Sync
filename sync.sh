@@ -34,7 +34,7 @@ find "$base_dir" -type f -name "*.srt" | while read subtitle; do
   base_name_no_lang="${base_name%.*}"  # Remove the language code (last part after the last dot)
 
   # Search for associated video files in the directory and subdirectories
-  video=$(find "$base_dir" -type f -name "$base_name_no_lang*.mkv" | head -n 1)
+  video=$(find "$base_dir" -type f -iname "$(printf "%q" "$base_name_no_lang")*.mkv" | head -n 1)
   echo "Looking for associated video file: $video"
 
   if [[ -f "$video" ]]; then
